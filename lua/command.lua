@@ -34,5 +34,5 @@ vim.api.nvim_create_user_command("IncludeGuardUpdate", function(opts)
 end, { nargs = "?" })
 
 vim.api.nvim_create_user_command("Format", function(_)
-    require("conform").format({ buf_nr = 0 })
+    require("conform").format({ async = true, lsp_fallback = true })
 end, { nargs = 0 })

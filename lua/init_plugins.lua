@@ -28,6 +28,15 @@ M.init = function()
         { "rebelot/kanagawa.nvim", lazy = false, priority = 1000 },
         { "ellisonleao/gruvbox.nvim", lazy = false, priority = 1000 },
         { "akinsho/toggleterm.nvim", version = "*", config = true },
+        { "olimorris/onedarkpro.nvim" },
+        {
+            "ray-x/lsp_signature.nvim",
+            event = "VeryLazy",
+            opts = {},
+            config = function(_, opts)
+                require("lsp_signature").setup(opts)
+            end,
+        },
         "tpope/vim-sleuth",
         "wsdjeg/vim-fetch",
         require("plugins.c_Comment"),
@@ -44,10 +53,11 @@ M.init = function()
         require("plugins.c_lualine"),
         require("plugins.c_harpoon"),
         require("plugins.c_multicursors"),
-        require("plugins.c_barbar"),
         require("plugins.c_nvim-surround"),
         require("plugins.c_nvim-autopairs"),
         require("plugins.c_auto-save"),
+        require("plugins.c_nvim-scrollbar"),
+        require("plugins.c_bufferline"),
     }
 
     require("lazy").setup({ unpack(table_map(plugins, convert_custom_plugin)) })

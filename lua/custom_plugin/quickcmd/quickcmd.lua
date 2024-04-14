@@ -1,6 +1,6 @@
 local M = {}
 
-local quickcmd_db = vim.fn.stdpath("config") .. "/lua/custom_plugin/quickcmd/quickcmd.txt"
+local quickcmd_db = vim.fn.stdpath("data") .. "quickcmd.txt"
 
 M.run_cmd = function()
     local f = io.open(quickcmd_db, "r")
@@ -40,8 +40,5 @@ M.init = function()
         M.get_cmd()
     end, { nargs = 0 })
 end
-
-M.init()
-vim.keymap.set("n", "<C-c>", M.run_cmd)
 
 return M
