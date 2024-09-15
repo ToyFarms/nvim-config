@@ -107,7 +107,7 @@ local function path_sub_loc(path)
     local loc = path_get_loc_as_str(path)
     if loc == nil then return path end
 
-    local loc_start = string.find(path, loc)
+    local loc_start = path:find(loc)
     return path:sub(1, loc_start - 1):sub(1, -2)
 end
 
@@ -131,7 +131,9 @@ local function add_jump()
 end
 
 M.goto_link_file = function(path)
-    path = vim.fn.expand(path)
+    if path:find("~") then
+        path = vim.fn.expand(path)
+    end
     local row, col = unpack(path_get_loc(path))
     path = path_sub_loc(path)
     if not file_exists(path) then return -1 end
@@ -198,7 +200,7 @@ local function get_word_separated_by(str, loc, sep_left, sep_right)
     return str:sub(left_bound, right_bound)
 end
 
-local separator = { { "'", "'" }, { '"', '"' }, { " ", " " }, { "[", "]" }, { "(", ")" }, { "{", "}" }, { "|", "|" } }
+local separator = { { " ", " " }, { "'", "'" }, { '"', '"' }, { "[", "]" }, { "(", ")" }, { "{", "}" }, { "|", "|" } }
 
 M.get_link_under_cursor = function()
     local row, col = unpack(vim.api.nvim_win_get_cursor(0))

@@ -78,7 +78,11 @@ M.lazy = {
 
         require("mason-lspconfig").setup({
             handlers = {
+                ---@param server_name string
                 function(server_name)
+                    if server_name == "rust_analyzer" then
+                        return
+                    end
                     local server = servers[server_name] or {}
                     server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
                     require("lspconfig")[server_name].setup(server)

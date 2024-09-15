@@ -14,6 +14,7 @@ M.lazy = {
             html = { "prettier" },
             css = { "prettier" },
             c = { "clang-format" },
+            rust = { "rust_analyzer" },
         },
     },
 }

@@ -65,3 +65,8 @@ vim.keymap.set("n", "<Leader>db", "<Cmd>DapToggleBreakpoint<CR>", { desc = "[D]e
 vim.keymap.set("n", "<Leader>dc", "<Cmd>DapContinue<CR>", { desc = "[D]ebug [C]ontinue" })
 vim.keymap.set("n", "<Leader>ds", "<Cmd>DapStepOver<CR>", { desc = "[D]ebug [S]tep" })
 vim.keymap.set("n", "<Leader>g", "<Cmd>Neogit<CR>", { desc = "Open git" })
+vim.keymap.set("n", "<C-f>", function()
+    require("conform").format({ async = true, lsp_fallback = true })
+end)
+vim.keymap.set("n", "<Leader>cn", "<Cmd>cn<CR>")
+vim.keymap.set("n", "<Leader>cp", "<Cmd>cp<CR>")
