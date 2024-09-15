@@ -24,47 +24,17 @@ M.init = function()
     vim.opt.rtp:prepend(lazypath)
 
     local plugins = {
-        { "folke/tokyonight.nvim",    lazy = false,  priority = 1000 },
-        { "rebelot/kanagawa.nvim",    lazy = false,  priority = 1000 },
-        { "ellisonleao/gruvbox.nvim", lazy = false,  priority = 1000 },
-        { "akinsho/toggleterm.nvim",  version = "*", config = true },
-        { "olimorris/onedarkpro.nvim" },
-        {
-            "ray-x/lsp_signature.nvim",
-            event = "VeryLazy",
-            opts = {
-                hint_prefix = "@ ",
-            },
-            config = function(_, opts)
-                require("lsp_signature").setup(opts)
-            end,
-        },
-        {
-            'fei6409/log-highlight.nvim',
-            config = function()
-                require('log-highlight').setup {}
-            end,
-        },
-        { "yorickpeterse/nvim-window",           config = true },
-        { "tpope/vim-dadbod" },
-        { "kristijanhusak/vim-dadbod-ui" },
-        { "kristijanhusak/vim-dadbod-completion" },
-        {
-            "https://github.com/mrcjkb/rustaceanvim",
-            version = "^5",
-            lazt = false,
-            ["rust-analyzer"] = {
-                cargo = {
-                    allFeatures = true,
-                },
-                procMacro = {
-                    enable = true,
-                },
-            }
-        },
-        "tpope/vim-sleuth",
-        "windwp/nvim-ts-autotag",
+        require("plugins.c_themes"),
+        require("plugins.c_lspkind"),
+        require("plugins.c_lsp_signature"),
+        require("plugins.c_log-highlight"),
+        require("plugins.c_nvim-window"),
+        require("plugins.c_dadbod"),
+        require("plugins.c_toggleterm"),
+        require("plugins.c_vim-sleuth"),
         require("plugins.c_cmake-tools"),
+        require("plugins.c_typescript"),
+        require("plugins.c_rustaceanvim"),
         require("plugins.c_Comment"),
         require("plugins.c_neogit"),
         require("plugins.c_nvim-tree"),
@@ -87,7 +57,6 @@ M.init = function()
         require("plugins.c_nvim-ts-autotag"),
         require("plugins.c_tailwind-tools"),
         require("plugins.c_mini"),
-        -- require("plugins.c_nvim-ufo"),
     }
 
     require("lazy").setup({ unpack(table_map(plugins, convert_custom_plugin)) })
