@@ -29,6 +29,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.have_nerd_font = true
 vim.g.VM_theme = "paper"
 vim.opt.relativenumber = true
+vim.opt.mousemoveevent = true
 
 -- local powershell_options = {
 --     shell = vim.fn.executable("pwsh") == 1 and "pwsh" or "powershell",
