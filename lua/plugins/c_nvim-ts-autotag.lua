@@ -4,7 +4,7 @@ M.lazy = {
     "windwp/nvim-ts-autotag"
 }
 
-M.init = function()
+function M.init()
     require("nvim-ts-autotag").setup()
 end
 

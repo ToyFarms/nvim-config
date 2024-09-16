@@ -4,7 +4,7 @@ M.lazy = {
     "Civitasv/cmake-tools.nvim",
 }
 
-M.init = function()
+function M.init()
     require("cmake-tools").setup({})
 end
 

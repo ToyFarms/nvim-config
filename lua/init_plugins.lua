@@ -15,7 +15,7 @@ local function convert_custom_plugin(plugin)
     return plugin.lazy
 end
 
-M.init = function()
+function M.init()
     local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
     if not vim.loop.fs_stat(lazypath) then
         local lazyrepo = "https://github.com/folke/lazy.nvim.git"

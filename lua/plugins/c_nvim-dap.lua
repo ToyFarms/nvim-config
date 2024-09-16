@@ -15,7 +15,7 @@ local function file_exists(path)
     end
 end
 
-M.init = function()
+function M.init()
     require("dapui").setup()
     local dap = require("dap")
 

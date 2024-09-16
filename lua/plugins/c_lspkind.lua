@@ -4,7 +4,7 @@ M.lazy = {
     "onsails/lspkind.nvim",
 }
 
-M.init = function()
+function M.init()
     local lspkind = require('lspkind')
     require("cmp").setup {
         formatting = {

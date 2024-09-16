@@ -10,7 +10,7 @@ M.lazy = {
     },
 }
 
-M.init = function()
+function M.init()
     require("barbecue").setup()
 end
 

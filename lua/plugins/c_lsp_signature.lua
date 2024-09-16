@@ -5,7 +5,7 @@ M.lazy = {
     event = "VeryLazy",
 }
 
-M.init = function()
+function M.init()
     require("lsp_signature").setup({
         hint_prefix = "@ ",
     })

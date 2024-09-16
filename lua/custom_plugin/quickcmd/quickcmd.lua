@@ -31,7 +31,7 @@ M.add_cmd = function(cmd)
     f:close()
 end
 
-M.init = function()
+function M.init()
     vim.api.nvim_create_user_command("CommandSet", function(opts)
         M.add_cmd(opts.args)
     end, { nargs = "?" })
@@ -58,6 +58,6 @@ M.init = function()
     end)
 end
 
--- M.init()
+-- M.init
 
 return M

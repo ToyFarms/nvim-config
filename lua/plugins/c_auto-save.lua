@@ -7,7 +7,7 @@ M.lazy = {
     },
 }
 
-M.init = function()
+function M.init()
     -- auto-save "enabled=false" doesn't work, so we just toggle it manually
     vim.cmd("ASToggle")
 end

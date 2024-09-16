@@ -6,7 +6,7 @@ M.lazy = {
     dependencies = "nvim-tree/nvim-web-devicons",
 }
 
-M.init = function()
+function M.init()
     require("bufferline").setup({
         options = {
             separator_style = "thin",

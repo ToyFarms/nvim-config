@@ -5,7 +5,7 @@ M.lazy = {
     dependencies = { "stevearc/dressing.nvim" }
 }
 
-M.init = function()
+function M.init()
     require("icon-picker").setup({ disable_legacy_commands = true })
 end
 

@@ -6,7 +6,7 @@ M.lazy = {
     opts = {}
 }
 
-M.init = function()
+function M.init()
     require("tailwind-tools").setup({})
 end
 

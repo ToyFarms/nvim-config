@@ -20,7 +20,7 @@ M.lazy = {
 }
 
 -- Optional
--- M.init = function()
+-- function M.init()
 --     Called after lazy.init()
 -- end
 

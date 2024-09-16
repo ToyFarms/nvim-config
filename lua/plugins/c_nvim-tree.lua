@@ -51,7 +51,7 @@ M.lazy = {
 --     end
 -- end
 --
--- M.init = function()
+-- function M.init()
 --     vim.api.nvim_create_autocmd("WinClosed", {
 --         callback = function()
 --             local winnr = tonumber(vim.fn.expand("<amatch>"))

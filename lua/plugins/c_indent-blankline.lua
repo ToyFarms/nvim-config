@@ -5,7 +5,7 @@ M.lazy = {
     main = "ibl",
 }
 
-M.init = function()
+function M.init()
     -- require("ibl").setup()
     local highlight = {
         "Cyan",

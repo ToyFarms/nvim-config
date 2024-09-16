@@ -4,7 +4,7 @@ M.lazy = {
     'fei6409/log-highlight.nvim'
 }
 
-M.init = function()
+function M.init()
     require('log-highlight').setup({})
 end
 

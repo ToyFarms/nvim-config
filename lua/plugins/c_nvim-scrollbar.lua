@@ -4,7 +4,7 @@ M.lazy = {
     "petertriho/nvim-scrollbar"
 }
 
-M.init = function()
+function M.init()
     require("scrollbar").setup()
 end
 

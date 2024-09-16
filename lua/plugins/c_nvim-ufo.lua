@@ -5,7 +5,7 @@ M.lazy = {
     dependencies = { "kevinhwang91/promise-async" }
 }
 
-M.init = function()
+function M.init()
     vim.o.foldcolumn = "1"
     vim.o.foldlevel = 99
     vim.o.foldlevelstart = 99
