@@ -26,7 +26,7 @@ M.lazy = {
                 map("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
                 map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
                 -- map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
-                require("lsp_signature").on_attach({}, event.buf)
+                -- require("lsp_signature").on_attach({}, event.buf)
 
                 local client = vim.lsp.get_client_by_id(event.data.client_id)
                 if client and client.server_capabilities.documentHighlightProvider then

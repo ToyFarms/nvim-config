@@ -17,12 +17,14 @@ M.lazy = {
         },
     },
     config = function()
-        pcall(require("telescope").load_extension, "fzf")
+        local telescope = require("telescope")
+        telescope.load_extension("fzf")
 
         local builtin = require("telescope.builtin")
         vim.keymap.set("n", "<Leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
         vim.keymap.set("n", "<Leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
-        vim.keymap.set("n", "<Leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
+        vim.keymap.set("n", "<Leader>sf", builtin.lsp_workspace_symbols,
+            { desc = "[S]earch [F]unction (its actually symbol but whatever)" })
         vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "[S]earch [F]iles" })
         vim.keymap.set("n", "<Leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
         vim.keymap.set("n", "<Leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })

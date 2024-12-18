@@ -26,7 +26,7 @@ function M.init()
     local plugins = {
         require("plugins.c_themes"),
         require("plugins.c_lspkind"),
-        require("plugins.c_lsp_signature"),
+        -- require("plugins.c_lsp_signature"),
         require("plugins.c_log-highlight"),
         require("plugins.c_nvim-window"),
         require("plugins.c_dadbod"),
@@ -61,7 +61,8 @@ function M.init()
         require("plugins.c_nvim-spectre"),
         require("plugins.c_actions-preview"),
         require("plugins.c_icon-picker"),
-        require("plugins.c_barbecue")
+        require("plugins.c_barbecue"),
+        -- require("plugins.c_neovim-project")
     }
 
     require("lazy").setup({ unpack(table_map(plugins, convert_custom_plugin)) })

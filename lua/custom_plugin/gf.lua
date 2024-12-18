@@ -241,7 +241,7 @@ M.get_link_under_selection = function()
     M.goto_link(get_selected_text())
 end
 
-vim.keymap.set("n", "gf", M.get_link_under_cursor)
-vim.keymap.set("v", "gf", M.get_link_under_selection)
+-- vim.keymap.set("n", "gf", M.get_link_under_cursor)
+-- vim.keymap.set("v", "gf", M.get_link_under_selection)
 
 return M
