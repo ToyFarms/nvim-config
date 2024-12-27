@@ -38,7 +38,9 @@ function M.init()
         require("plugins.c_Comment"),
         require("plugins.c_neogit"),
         -- require("plugins.c_nvim-tree"),
-        require("plugins.c_chadtree"),
+        -- require("plugins.c_chadtree"),
+        -- require("plugins.c_oil"),
+        require("plugins.c_dired"),
         require("plugins.c_gitsigns"),
         require("plugins.c_which-key"),
         require("plugins.c_telescope"),
@@ -51,7 +53,7 @@ function M.init()
         require("plugins.c_multicursors"),
         require("plugins.c_nvim-surround"),
         require("plugins.c_nvim-autopairs"),
-        require("plugins.c_auto-save"),
+        -- require("plugins.c_auto-save"),
         require("plugins.c_nvim-scrollbar"),
         -- require("plugins.c_bufferline"),
         require("plugins.c_nvim-dap"),
@@ -63,6 +65,9 @@ function M.init()
         require("plugins.c_icon-picker"),
         require("plugins.c_barbecue"),
         -- require("plugins.c_neovim-project")
+        require("plugins.c_abolish"),
+        -- require("plugins.c_nvim-lint"),
+        require("plugins.c_compile-mode"),
     }
 
     require("lazy").setup({ unpack(table_map(plugins, convert_custom_plugin)) })

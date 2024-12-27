@@ -11,7 +11,11 @@ M.lazy = {
 }
 
 function M.init()
-    require("barbecue").setup()
+    vim.schedule(function()
+        require("barbecue").setup({
+            exclude_filetypes = { "netrw", "toggleterm", "dired" },
+        })
+    end)
 end
 
 return M

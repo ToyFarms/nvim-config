@@ -32,12 +32,12 @@ M.add_cmd = function(cmd)
 end
 
 function M.init()
-    vim.api.nvim_create_user_command("CommandSet", function(opts)
+    vim.api.nvim_create_user_command("QSet", function(opts)
         M.add_cmd(opts.args)
     end, { nargs = "?" })
 
     --- @diagnostic disable-next-line
-    vim.api.nvim_create_user_command("CommandGet", function(opts)
+    vim.api.nvim_create_user_command("QGet", function(opts)
         M.get_cmd()
     end, { nargs = 0 })
 
