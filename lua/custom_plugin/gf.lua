@@ -13,17 +13,17 @@ local function str_startswith(str, substr)
     return string.sub(str, 1, string.len(substr)) == substr
 end
 
-local function str_split(str, delim)
-    local result = {}
-    for match in (str .. delim):gmatch("(.-)" .. delim) do
-        table.insert(result, match)
-    end
-    return result
-end
-
-local function str_get_inbetween(str, left, right)
-    return str:match(left .. "(.-)" .. right)
-end
+-- local function str_split(str, delim)
+--     local result = {}
+--     for match in (str .. delim):gmatch("(.-)" .. delim) do
+--         table.insert(result, match)
+--     end
+--     return result
+-- end
+--
+-- local function str_get_inbetween(str, left, right)
+--     return str:match(left .. "(.-)" .. right)
+-- end
 
 local function str_get_integers(str)
     local integers = {}

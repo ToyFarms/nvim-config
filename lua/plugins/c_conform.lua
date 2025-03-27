@@ -12,9 +12,11 @@ M.lazy = {
             javascriptreact = { "prettier" },
             json = { "prettier" },
             html = { "prettier" },
+            htmldjango = { "prettier" },
             css = { "prettier" },
             c = { "clang-format" },
             rust = { "rust_analyzer" },
+            xml = { "xmlformatter" },
         },
     },
 }

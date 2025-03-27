@@ -51,8 +51,8 @@ function M.init()
         require("plugins.c_nvim-treesitter"),
         require("plugins.c_lualine"),
         require("plugins.c_multicursors"),
-        require("plugins.c_nvim-surround"),
-        require("plugins.c_nvim-autopairs"),
+        -- require("plugins.c_nvim-surround"),
+        -- require("plugins.c_nvim-autopairs"),
         -- require("plugins.c_auto-save"),
         require("plugins.c_nvim-scrollbar"),
         -- require("plugins.c_bufferline"),
@@ -68,6 +68,21 @@ function M.init()
         require("plugins.c_abolish"),
         -- require("plugins.c_nvim-lint"),
         require("plugins.c_compile-mode"),
+        require("plugins.c_flutter-tools"),
+        -- require("plugins.c_image"),
+        {
+            "ariel-frischer/bmessages.nvim",
+            event = "CmdlineEnter",
+            opts = {},
+        },
+        {
+            "smoka7/hop.nvim",
+            version = "*",
+            opts = {
+                -- keys = "etovxqpdygfblzhckisuran",
+                keys = "ajskdlznxmqiwo",
+            },
+        },
     }
 
     require("lazy").setup({ unpack(table_map(plugins, convert_custom_plugin)) })

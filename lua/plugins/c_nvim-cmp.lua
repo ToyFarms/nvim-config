@@ -10,6 +10,7 @@ M.lazy = {
                 if vim.fn.has("win32") == 1 or vim.fn.executable("make") == 0 then return end
                 return "make install_jsregexp"
             end)(),
+            dependencies = { "rafamadriz/friendly-snippets" },
         },
         "saadparwaiz1/cmp_luasnip",
         "hrsh7th/cmp-nvim-lsp",
@@ -18,15 +19,14 @@ M.lazy = {
     },
     config = function()
         local cmp = require("cmp")
-        local luasnip = require("luasnip")
-        luasnip.config.setup({})
+        local ls = require("luasnip")
 
         require("cmp").register_source("nvim_lsp_signature_help", require("cmp_nvim_lsp_signature_help").new())
 
         cmp.setup({
             snippet = {
                 expand = function(args)
-                    luasnip.lsp_expand(args.body)
+                    ls.lsp_expand(args.body)
                 end,
             },
             completion = { completeopt = "menu,menuone,noinsert" },

@@ -21,12 +21,7 @@ M.lazy = {
                 map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
                 map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
                 map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
-                map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
-                -- map("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
-                map("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
                 map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
-                -- map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
-                -- require("lsp_signature").on_attach({}, event.buf)
 
                 local client = vim.lsp.get_client_by_id(event.data.client_id)
                 if client and client.server_capabilities.documentHighlightProvider then
@@ -76,9 +71,7 @@ M.lazy = {
             handlers = {
                 ---@param server_name string
                 function(server_name)
-                    if server_name == "rust_analyzer" then
-                        return
-                    end
+                    if server_name == "rust_analyzer" then return end
                     local server = servers[server_name] or {}
                     server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
                     require("lspconfig")[server_name].setup(server)

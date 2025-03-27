@@ -2,6 +2,8 @@ local M = {}
 
 local quickcmd_db = vim.fn.stdpath("data") .. "quickcmd.txt"
 
+-- TODO: repurpose for compile mode
+
 M.run_cmd = function()
     local f = io.open(quickcmd_db, "r")
     if f == nil then
