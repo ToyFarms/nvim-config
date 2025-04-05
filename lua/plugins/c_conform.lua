@@ -11,6 +11,7 @@ M.lazy = {
             typescriptreact = { "prettier" },
             javascriptreact = { "prettier" },
             json = { "prettier" },
+            jsonc = { "prettier" },
             html = { "prettier" },
             htmldjango = { "prettier" },
             css = { "prettier" },

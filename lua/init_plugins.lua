@@ -51,8 +51,8 @@ function M.init()
         require("plugins.c_nvim-treesitter"),
         require("plugins.c_lualine"),
         require("plugins.c_multicursors"),
-        -- require("plugins.c_nvim-surround"),
-        -- require("plugins.c_nvim-autopairs"),
+        require("plugins.c_nvim-surround"),
+        require("plugins.c_nvim-autopairs"),
         -- require("plugins.c_auto-save"),
         require("plugins.c_nvim-scrollbar"),
         -- require("plugins.c_bufferline"),
@@ -80,7 +80,7 @@ function M.init()
             version = "*",
             opts = {
                 -- keys = "etovxqpdygfblzhckisuran",
-                keys = "ajskdlznxmqiwo",
+                keys = "jdksla",
             },
         },
     }

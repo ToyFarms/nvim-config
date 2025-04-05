@@ -1,4 +1,4 @@
-vim.cmd([[autocmd VimEnter * silent! lcd %:p:h]])
+-- vim.cmd([[autocmd VimEnter * silent! lcd %:p:h]])
 
 local function get_define_name(path)
     local filename = path:match("[^/\\]+$")

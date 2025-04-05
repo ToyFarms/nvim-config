@@ -7,8 +7,8 @@ M.lazy = {
         require("mini.align").setup()
         require("mini.move").setup()
         require("mini.pairs").setup()
-        require("mini.surround").setup()
-        require("mini.jump2d").setup()
+        -- require("mini.surround").setup()
+        -- require("mini.jump2d").setup()
     end,
 }
 
